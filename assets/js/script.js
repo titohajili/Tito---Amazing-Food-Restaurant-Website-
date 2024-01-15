@@ -101,6 +101,7 @@ const slidePrev = function () {
 heroSliderPrevBtn.addEventListener("click", slidePrev);
 
 // AUTO SLIDE
+
 let autoSlideInterval;
 
 const autoSlide = function () {
@@ -122,3 +123,25 @@ addEventToElements([heroSliderNextBtn, heroSliderPrevBtn], "mouseover", function
 addEventToElements([heroSliderNextBtn, heroSliderPrevBtn], "mouseout", autoSlide);
 
 window.addEventListener("load", autoSlide);
+
+/*
+ PARALLAX EFFECT
+ */
+
+const parallaxItems = document.querySelectorAll("[data-parallax-item]");
+
+let mouseX, mouseY;
+
+window.addEventListener("mousemove", function (event) {
+    mouseX = (event.clientX / window.innerWidth * 10) - 5;
+    mouseY = (event.clientY / window.innerHeight * 10) - 5;
+
+    // Reverse the numbers, e.g., 20 --> -20, -5 --> 5
+    mouseX = mouseX - (mouseX * 2);
+    mouseY = mouseY - (mouseY * 2);
+
+    for (let i = 0, len = parallaxItems.length; i < len; i++) {
+        const parallaxSpeed = Number(parallaxItems[i].dataset.parallaxSpeed);
+        parallaxItems[i].style.transform = `translate3d(${mouseX * parallaxSpeed}px, ${mouseY * parallaxSpeed}px, 0px)`;
+    }
+});
