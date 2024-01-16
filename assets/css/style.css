@@ -395,6 +395,9 @@ body.nav-active{overflow:hidden;}
  align-items: center;
   
   transition: var(--transition-2);
+  
+  display: none;
+
 }
 
 .preload > * {transition: var(--transition-1);}
@@ -869,4 +872,39 @@ body.nav-active{overflow:hidden;}
   background-repeat: no-repeat;
   background-size: contain;
   animation: rotate360 15s linear infinite;
+}
+
+/* ====SPECIAL DISH========= */
+
+.special-dish-content{ padding-block: 70px;}
+
+.special-dish .abs-img{
+  margin-inline: auto;
+  margin-block-end: 12px;
+}
+.special-dish .section-text {margin-block: 16px 40px;}
+
+.special-dish-content .wrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin-block-end: 40px;
+}
+
+.special-dish-content .del{
+  text-decoration: none;
+  color: var(--davys-grey);
+
+}
+
+.special-dish-content .span{
+  color: var(--gold-crayola);
+}
+.special-dish .btn{
+  margin-inline:  auto;
+}
+
+.special-dish .btn{
+  margin-inline: auto;
 }
