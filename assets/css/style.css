@@ -1287,3 +1287,80 @@ textarea.input-field{
 .footer-brand .separator{
   animation: rotate360 15s linear infinite;
 }
+
+.footer-brand .label-1{margin-block-end: 30px;}
+
+.footer-brand .label-1 .span{
+  display: inline;
+  color: var(--white);
+
+}
+
+.footer-brand .icon-wrapper .input-field{
+  cursor: text;
+}
+
+.footer-brand .btn {
+  min-width: 100%;
+}
+
+.footer-list{
+  display: grid;
+  gap: 20px;
+}
+
+.footer-link{
+  color: var(--quick-silver);
+  font-weight: var(--weight-bold);
+  text-transform: uppercase;
+  letter-spacing: var(--letterSpacing-4);
+  margin-inline: auto;
+  transition: var(--transition-1);
+}
+
+.footer-link:is(:hover, :focus-visible){
+  color: var(--gold-crayola);
+}
+.copyright{
+  color: var(--quick-silver);
+  line-height: var(--lineHeight-3);
+}
+
+.copyright .link{
+  display: inline;
+  color: var(--gold-crayola);
+  text-decoration: underline;
+}
+
+
+
+/* =====BACK TO TOP====== */
+
+.back-top-btn{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--gold-crayola);
+  color: var(--smoky-black-1);
+  font-size: 22px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  box-shadow: var(--shadow-1);
+  transition: var(--transition-1);
+  opacity: 0;
+  visibility: hidden;
+  z-index: 4;
+}
+
+.back-top-btn:is(:hover, :focus-visible){
+  background-color: var(--white);
+  color: var(--gold-crayola);
+}
+
+.back-top-btn.active{
+  opacity: 1;
+  visibility: visible;
+}
