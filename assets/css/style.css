@@ -332,9 +332,10 @@ body.nav-active{overflow:hidden;}
 }
 
 .grid-list{
-  display: grid;
-  gap: 40px;
+ display: grid;
+ gap: 30px;
 }
+ 
 
 .hover\:shine {
   position: relative;
@@ -1682,4 +1683,84 @@ textarea.input-field{
 
 @media (min-width: 1200px){
   
+  :root{
+    --fontSize-title-2:2.5rem;
+  }
+
+  .container,
+  :is(.servive, .event) .container{
+    max-width: 1200px;
+    width: 100%;
+    margin-inline: auto;
+  }
+
+  .topbar .container{max-width: unset;}
+
+  .topbar .separator{display: block;}
+
+
+  .nav-open-btn,
+  .navbar > *:not(.navbar-list),
+  .header .overlay{display: none;}
+
+  .header .container{max-width: unset;}
+
+  .navbar,
+  .navbar.active,
+  .navbar-list{all: unset;}
+
+  .navbar,
+  .navbar.active{margin-inline: auto 20px;}
+  
+  .navbar-list{
+    display: flex;
+    gap: 30px;
+  }
+
+  .navbar-item{border-block-start: none;}
+
+  .navbar .separator{display: none;}
+
+  .navbar-lin:is(:hover, :focus-visible, .active) .span{
+    transform: unset;
+  }
+
+  .navbar-link{
+    font-weight: var(--weight-bold);
+    letter-spacing: var(--letterSpacing-1);
+  }
+  .navbar-link::after{display: block;}
+
+  .navbar-link.active::after{
+    transform: scaleX(1);
+    opacity: 1;
+  }
+
+  .header .btn{margin-inline-start: 0;}
+
+  .hero{height: 880px;}
+
+  .hero-btn{
+    bottom: 50px;
+    right: 50px;
+    transform: scale(1);
+  }
+
+ .menu .grid-list{padding: 44px 210px;
+ 
+
+}
+.menu .grid-list li{
+  margin: 20px;
+}
+ .menu .grid-list li:nth-child(5){
+  width: 620px;
+}
+
+.form-left,
+.form-right{padding: 75px 60px;}
+
+
+.features .grid-list{grid-template-columns: repeat(4, 1fr);}
+
 }
